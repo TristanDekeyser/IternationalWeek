@@ -3,27 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My App</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Wandel App</title>
+    <link rel="stylesheet" href="styleshome.css" />
   </head>
   <body>
-    <div class="app-container">
-      <div class="progress-bar"></div>
-      <div class="button-container">
-        <button class="button">Activities</button>
-        <button class="button">Leaderboard</button>
+    <div class="container">
+      <div class="progress-bar">
+        <div class="progress"></div>
+        <img src="snail.png" alt="snail" class="snail-icon" />
       </div>
-      <input
-        type="text"
-        class="search-input"
-        placeholder="Search activities..."
-      />
-      <div class="activity-buttons">
-        <button class="activity-button">Activity 1</button>
-        <button class="activity-button">Activity 2</button>
-        <button class="activity-button">Activity 3</button>
-        <!-- Voeg hier meer knoppen toe voor verschillende activiteiten -->
+      <div class="stats">
+        <p>Kilometers gewandeld: <span id="kilometers">0</span></p>
+        <p>Dagen zonder gevangen te worden: <span id="days">0</span></p>
+      </div>
+      <div class="message">
+        <p id="message-text">Begin met wandelen om de slak te verslaan!</p>
+        <img src="meme1.png" alt="meme" id="meme-img" />
+      </div>
+      <div class="buttons">
+        <button id="scoreboard-btn">Scorebord</button>
+        <button id="home-btn">Home</button>
       </div>
     </div>
+
+    <script src="scripthome.js"></script>
   </body>
 </html>
