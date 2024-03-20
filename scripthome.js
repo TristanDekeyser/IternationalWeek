@@ -15,18 +15,18 @@ document.addEventListener("DOMContentLoaded", function() {
       progress.style.width = `${progressPercentage}%`;
   
       // Update message and meme based on progress
-      if (kilometers === 0) {
-        messageText.textContent = "Begin met wandelen om de slak te verslaan!";
+      if (kilometers >= 0 && kilometers < 3) {
+        messageText.textContent = "Good job, you’re faster than a snail";
         memeImg.src = "meme1.png";
-      } else if (kilometers < maxKilometers / 2) {
-        messageText.textContent = "Kom op! De slak haalt je bijna in!";
+      } else if (kilometers >= 3 && kilometers < 6) {
+        messageText.textContent = "Uhmm, it’s getting a bit closer. Might want to go outside and move your ass";
         memeImg.src = "meme2.png";
-      } else if (kilometers < maxKilometers) {
-        messageText.textContent = "Je bent bijna veilig! Blijf doorgaan!";
+      } else if (kilometers >= 6 && kilometers < 10) {
+        messageText.textContent = "What the hell are you doing!!! It is a literal snail and it’s catching up";
         memeImg.src = "meme3.png";
       } else {
         // If progress is complete
-        messageText.textContent = "Je hebt de slak verslagen! Goed gedaan!";
+        messageText.textContent = "Cant even out run a snail.... you fat ass";
         memeImg.src = "meme4.png";
         kilometers = 0; // Reset kilometers
         days = 0; // Reset days
