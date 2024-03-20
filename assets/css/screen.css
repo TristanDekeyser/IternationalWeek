@@ -43,3 +43,64 @@
     font-size: 16px;
   }
   
+
+/* LEADERBOAD */
+h1 {
+  font-size: 3rem;
+}
+
+
+body#leaderboard {
+  display: flex;
+  align-items: center; /* Center horizontally */
+  flex-direction: column;
+  height: 100vh; /* Ensure full viewport height */
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12.5rem; /* Adjust width as needed */
+
+  border: 0.1rem solid #000;
+  border-radius: 0.625rem;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.switch-field {
+  text-align: center;
+  width: 6.25rem; /* Adjust width as needed */
+}
+
+.left-arrow {
+  margin-right: 0.625rem; /* Adjust spacing as needed */
+}
+
+.right-arrow {
+  margin-left: 0.625rem; /* Adjust spacing as needed */
+}
+
+
+.user-stats {
+  display: grid;
+  grid-template-columns: 3rem 15rem 10rem 10rem; /* Adjust column widths as needed */
+  gap: 1rem; /* Adjust gap between columns as needed */
+
+  background-color: #f0f0f0;
+
+  padding: 0.5rem;
+  margin-top: 2rem;
+
+  border: solid 0.01rem #000;
+  border-radius: 0.5rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+
