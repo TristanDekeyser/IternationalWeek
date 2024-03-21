@@ -4,28 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wandel App</title>
-    <link rel="stylesheet" href="styleshome.css" />
+    <link rel="stylesheet" href="assets/css/screen.css" />
+    <link rel="stylesheet" href="assets/css/reset.css">
   </head>
   <body>
     <div class="container">
       <div class="progress-bar">
         <div class="progress"></div>
-        <img src="snail.png" alt="snail" class="snail-icon" />
+        <div class="progress-text">
+          Only <span id="remaining-km">...</span> km left before the snail
+          catches up
+        </div>
+        <img src="assets/images/snail.png" alt="snail" class="snail-icon" />
+        <img src="assets/images/death.png" alt="death" class="death-icon" />
       </div>
-      <div class="stats">
-        <p>Kilometers gewandeld: <span id="kilometers">0</span></p>
-        <p>Dagen zonder gevangen te worden: <span id="days">0</span></p>
+      <div class="stats-box">
+        <div class="stats">
+          <p>
+            <strong>Distance traveled (km):</strong>
+            <span id="kilometers">0</span>
+          </p>
+          <p>
+            <strong>Days survived:</strong>
+            <span id="days">0</span>
+          </p>
+        </div>
+        <button id="share-btn" class="share-icon"></button>
       </div>
+
       <div class="message">
-        <p id="message-text">Begin met wandelen om de slak te verslaan!</p>
-        <img src="meme1.png" alt="meme" id="meme-img" />
+        <p id="message-text">Good job, you’re faster than a snail</p>
+        <img src="assets/images/meme1.png" alt="meme" id="meme-img" class="meme-img" />
       </div>
       <div class="buttons">
-        <button id="scoreboard-btn">Scorebord</button>
-        <button id="home-btn">Home</button>
+        <button id="scoreboard-btn">
+          <img src="assets/images/trophy.png" alt="trophy" class="trophy-icon" />
+        </button>
+        <button id="home-btn">
+          <img src="assets/images/snail.png" alt="snail" class="snail-icon2" />
+        </button>
       </div>
     </div>
 
-    <script src="scripthome.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
