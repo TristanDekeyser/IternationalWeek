@@ -45,16 +45,18 @@
   
 
 /* LEADERBOAD */
-h1 {
-  font-size: 3rem;
-}
-
-
 body#leaderboard {
   display: flex;
   align-items: center; /* Center horizontally */
   flex-direction: column;
   height: 100vh; /* Ensure full viewport height */
+  background-color: #0f3057; /* Dark blue background */
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff; /* White text color */
+  margin-bottom: 2rem; /* Add some space below the heading */
 }
 
 .switch-container {
@@ -62,18 +64,21 @@ body#leaderboard {
   align-items: center;
   justify-content: center;
   width: 12.5rem; /* Adjust width as needed */
-
-  border: 0.1rem solid #000;
+  border: 0.01rem solid #fff; /* White border */
   border-radius: 0.625rem;
 }
 
 .arrow {
   cursor: pointer;
+  color: #fff; /* White arrow color */
+  font-size: 1.5rem; /* Increase arrow size */
 }
 
 .switch-field {
   text-align: center;
   width: 6.25rem; /* Adjust width as needed */
+  color: #fff; /* White text color */
+  font-size: 1.2rem; /* Increase font size */
 }
 
 .left-arrow {
@@ -84,23 +89,39 @@ body#leaderboard {
   margin-left: 0.625rem; /* Adjust spacing as needed */
 }
 
-
-.user-stats {
+.leaderboard-stats, .user-stats {
   display: grid;
   grid-template-columns: 3rem 15rem 10rem 10rem; /* Adjust column widths as needed */
   gap: 1rem; /* Adjust gap between columns as needed */
-
-  background-color: #f0f0f0;
-
-  padding: 0.5rem;
-  margin-top: 2rem;
-
-  border: solid 0.01rem #000;
+  background-color: #1a936f; /* Dark green background */
+  padding: 0.5rem 0 0.5rem 1.5rem;
   border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition: transform 0.2s ease-in-out; /* Add transition effect */
 }
 
 .stat {
   text-align: center;
+  color: #fff; /* White text color */
 }
 
+.leaderboard-stats {
+  background-color: #ff6f61; /* Dark red background */
+  margin-top: 2rem; /* Add some space above the leaderboard */
+  font-weight: bold;
+}
 
+.user-stats {
+  margin-top: 0.3rem;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* Add transition effect */
+}
+
+button:hover {
+  transform: scale(1.1); /* Scale up button on hover */
+}
