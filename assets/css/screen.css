@@ -149,41 +149,40 @@ img {
   
 
 /* LEADERBOAD */
-body#leaderboard {
-  display: flex;
-  align-items: center; /* Center horizontally */
-  flex-direction: column;
-  height: 100vh; /* Ensure full viewport height */
-  background-color: #0f3057; /* Dark blue background */
-}
-
 h1 {
   font-size: 3rem;
-  color: #fff; /* White text color */
   margin-bottom: 2rem; /* Add some space below the heading */
 }
 
 .switch-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 12.5rem; /* Adjust width as needed */
-  border: 0.01rem solid #fff; /* White border */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 0.01rem solid black; /* White border */
   border-radius: 0.625rem;
+  height: 2rem; /* Set the height of the switch container */
+
+  margin-top: 1rem;
+
+  padding-top: 0.2rem
 }
+
+
 
 .arrow {
   cursor: pointer;
-  color: #fff; /* White arrow color */
-  font-size: 1.5rem; /* Increase arrow size */
+  font-size: 1.5rem; /* Keep the font size */
+  height: 1.5rem; /* Set the height of the arrow buttons */
+  line-height: 1rem; /* Adjust line height if needed */
 }
 
-.switch-field {
+
+#switch-field {
   text-align: center;
   width: 6.25rem; /* Adjust width as needed */
-  color: #fff; /* White text color */
-  font-size: 1.2rem; /* Increase font size */
+  font-size: 1.2rem; /* Reduce font size */
+  margin: 0.3rem; /* Remove margin */
 }
+
 
 .left-arrow {
   margin-right: 0.625rem; /* Adjust spacing as needed */
@@ -195,9 +194,9 @@ h1 {
 
 .leaderboard-stats, .user-stats {
   display: grid;
-  grid-template-columns: 3rem 15rem 10rem 10rem; /* Adjust column widths as needed */
+  grid-template-columns: 1rem 7rem 5rem 4rem; /* Adjust column widths as needed */
   gap: 1rem; /* Adjust gap between columns as needed */
-  background-color: #1a936f; /* Dark green background */
+  background-color: gray; /* Dark green background */
   padding: 0.5rem 0 0.5rem 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); /* Add shadow */
@@ -213,11 +212,14 @@ h1 {
   background-color: #ff6f61; /* Dark red background */
   margin-top: 2rem; /* Add some space above the leaderboard */
   font-weight: bold;
+  font-size: 0.6rem;
 }
 
 .user-stats {
   margin-top: 0.3rem;
 }
+
+
 
 button {
   border: none;
@@ -228,4 +230,8 @@ button {
 
 button:hover {
   transform: scale(1.1); /* Scale up button on hover */
+}
+
+.leaderboard .buttons {
+margin-top: 2rem;
 }

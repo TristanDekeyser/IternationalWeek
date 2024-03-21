@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,93 +9,115 @@
     <link rel="stylesheet" href="assets/css/screen.css">
     <link rel="stylesheet" href="asset/css/reset.css">
     <script src="assets/js/leaderboardController.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
-<body id="leaderboard">
-    <h1>LEADERBOARD</h1>
 
-    <div class="switch-container">
-        <button class="arrow left-arrow">&lt;</button>
-        <p id="switch-field" class="switch-field">GLOBAL</p>
-        <button class="arrow right-arrow">&gt;</button>
-    </div>
-    
+<body class="leaderboard">
 
-    <div class="leaderboard-stats">
-        <div class="stat">Ranking</div>
-        <div class="stat">Username</div>
-        <div class="stat">Total km</div>
-        <div class="stat">Days Survived</div>
+    <div class="container">
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+
+            <img src="assets/images/snail.png" alt="snail" class="snail-icon" />
+            <img src="assets/images/death.png" alt="death" class="death-icon" />
+          </div>
+
+        <div class="switch-container">
+            <button class="arrow left-arrow">&lt;</button>
+            <p id="switch-field">GLOBAL</p>
+            <button class="arrow right-arrow">&gt;</button>
+        </div>
+
+
+        <div class="leaderboard-stats">
+            <div class="stat">Rank</div>
+            <div class="stat">Username</div>
+            <div class="stat">Total km</div>
+            <div class="stat">Days Survived</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">1</div>
+            <div class="stat">User1</div>
+            <div class="stat">100</div>
+            <div class="stat">10</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">2</div>
+            <div class="stat">User2</div>
+            <div class="stat">200</div>
+            <div class="stat">15</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">3</div>
+            <div class="stat">User3</div>
+            <div class="stat">150</div>
+            <div class="stat">8</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">4</div>
+            <div class="stat">User4</div>
+            <div class="stat">250</div>
+            <div class="stat">12</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">5</div>
+            <div class="stat">User5</div>
+            <div class="stat">175</div>
+            <div class="stat">9</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">6</div>
+            <div class="stat">User6</div>
+            <div class="stat">300</div>
+            <div class="stat">20</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">7</div>
+            <div class="stat">User7</div>
+            <div class="stat">120</div>
+            <div class="stat">11</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">8</div>
+            <div class="stat">User8</div>
+            <div class="stat">180</div>
+            <div class="stat">13</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">9</div>
+            <div class="stat">User9</div>
+            <div class="stat">220</div>
+            <div class="stat">18</div>
+        </div>
+
+        <div class="user-stats">
+            <div class="stat">10</div>
+            <div class="stat">User10</div>
+            <div class="stat">270</div>
+            <div class="stat">16</div>
+        </div>
+
+        <div class="buttons">
+            <button id="scoreboard-btn">
+              <img src="assets/images/trophy.png" alt="trophy" class="trophy-icon" />
+            </button>
+            <button id="home-btn">
+              <img src="assets/images/snail.png" alt="snail" class="snail-icon2" />
+            </button>
+          </div>
+
     </div>
 
-    <div class="user-stats">
-        <div class="stat">1</div>
-        <div class="stat">User1</div>
-        <div class="stat">100</div>
-        <div class="stat">10</div>
-    </div>
-    
-    <div class="user-stats">
-        <div class="stat">2</div>
-        <div class="stat">User2</div>
-        <div class="stat">200</div>
-        <div class="stat">15</div>
-    </div>
-    
-    <div class="user-stats">
-        <div class="stat">3</div>
-        <div class="stat">User3</div>
-        <div class="stat">150</div>
-        <div class="stat">8</div>
-    </div>
-    
-    <div class="user-stats">
-        <div class="stat">4</div>
-        <div class="stat">User4</div>
-        <div class="stat">250</div>
-        <div class="stat">12</div>
-    </div>
-    
-    <div class="user-stats">
-        <div class="stat">5</div>
-        <div class="stat">User5</div>
-        <div class="stat">175</div>
-        <div class="stat">9</div>
-    </div>
-    
-    <div class="user-stats">
-        <div class="stat">6</div>
-        <div class="stat">User6</div>
-        <div class="stat">300</div>
-        <div class="stat">20</div>
-    </div>
-    
-    <div class="user-stats">
-        <div class="stat">7</div>
-        <div class="stat">User7</div>
-        <div class="stat">120</div>
-        <div class="stat">11</div>
-    </div>
-    
-    <div class="user-stats">
-        <div class="stat">8</div>
-        <div class="stat">User8</div>
-        <div class="stat">180</div>
-        <div class="stat">13</div>
-    </div>
-    
-    <div class="user-stats">
-        <div class="stat">9</div>
-        <div class="stat">User9</div>
-        <div class="stat">220</div>
-        <div class="stat">18</div>
-    </div>
-    
-    <div class="user-stats">
-        <div class="stat">10</div>
-        <div class="stat">User10</div>
-        <div class="stat">270</div>
-        <div class="stat">16</div>
-    </div>
-  
 </body>
+
 </html>

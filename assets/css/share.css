@@ -1,0 +1,59 @@
+/* Algemene stijlen */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 10px;
+    float: right;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.share-btn {
+    margin: 5px;
+    text-align: center;
+}
+
+.share-btn img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.share-btn:hover img {
+    transform: scale(1.1);
+}
+
+#kruisje {
+    position: relative;
+    
+    height: 20px;
+    margin-left: 1200px;
+    margin-top: 75px;
+    width: 10px;
+}
+
+#kruisje img{
+    width: 20px;
+    margin-top: 15px;
+}
+
+#slak {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}

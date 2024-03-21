@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const progress = document.querySelector('.progress');
+  const snailIcon = document.querySelector('.snail-icon');
   const kilometersElement = document.getElementById('kilometers');
   const daysElement = document.getElementById('days');
   const messageText = document.getElementById('message-text');
@@ -14,8 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const progressPercentage = (kilometers / maxKilometers) * 100;
     progress.style.width = `${progressPercentage}%`;
 
-    const remainingKm = maxKilometers - kilometers;
-    document.getElementById('remaining-km').textContent = remainingKm.toFixed(1);
+
+    // Update snail position
+    const snailPosition = (progressPercentage / 100) * progressBarWidth;
+    snailIcon.style.left = `${snailPosition}px`;
 
     // Update message and meme based on progress
     if (kilometers >= 0 && kilometers < 3) {
@@ -39,22 +42,25 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function walk() {
-    kilometers += 0.5; // Increment by example value
-    days += 1; // Increment by 1 for simplicity
-    updateProgress();
+    if (maxKilometers - kilometers > 0) { // Check if there are remaining kilometers
+      kilometers += 0.5; // Increment by example value
+      days += 1; // Increment by 1 for simplicity
+      updateProgress();
+    }
   }
+  
 
   const homeBtn = document.getElementById('home-btn');
   const scoreboardBtn = document.getElementById('scoreboard-btn');
 
   homeBtn.addEventListener('click', function() {
     // Logic to navigate back to home screen
-    console.log("Navigating to home screen...");
+    window.location.href = "index.html";
   });
 
   scoreboardBtn.addEventListener('click', function() {
     // Logic to navigate to scoreboard
-    console.log("Navigating to scoreboard...");
+    window.location.href = "leaderboard.html";
   });
 
   setInterval(walk, 2000); // Example interval for walking simulation
